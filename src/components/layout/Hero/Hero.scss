@@ -1,29 +1,44 @@
-@use '/src/scss/index' as *;
+@use "/src/scss/index" as *;
 
 .hero {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #e7e7e7;
+  @include max-width($bp-laptop) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__sub-title {
+    margin-bottom: 16px;
+  }
+
+  &__content {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: #e7e7e7;
-    @include max-width($bp-tablet) {
-        flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em 2em;
+    width: 50%;
+    @include max-width($bp-laptop) {
+      width: auto;
+      padding: 2em;
+      align-items: center;
     }
+  }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 5em 2em;
-        @include max-width($bp-tablet) {
-            padding: 2em;
-            align-items: center;
-        }
+  &__image {
+    max-width: 60%;
+    @include max-width($bp-laptop) {
+      max-width: 100%;
     }
+  }
 
-    &__image {
-        max-width: 60%;
-        @include max-width($bp-tablet) {
-            max-width: 100%;
-        }
-    }
+  a {
+    width: fit-content;
+  }
 }
