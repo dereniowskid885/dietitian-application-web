@@ -36,9 +36,14 @@ function Footer() {
           <div className="footer__column">
             <div className="footer__dropdown" onClick={expandDropdown}>
               {"Podstrony"}
-              <RiArrowDropDownLine className={`${isDropdownClicked.first ? "animate" : ""}`} />
+              <RiArrowDropDownLine
+                className={`${isDropdownClicked.first ? "animate" : ""}`}
+              />
             </div>
-            <ul id="dropdown-1" className={`${isDropdownClicked.first ? "" : "hidden"}`}>
+            <ul
+              id="dropdown-1"
+              className={`${isDropdownClicked.first ? "" : "hidden"}`}
+            >
               <li>
                 <Link to="/o-mnie">O mnie</Link>
               </li>
@@ -56,9 +61,14 @@ function Footer() {
           <div className="footer__column">
             <div className="footer__dropdown" onClick={expandDropdown}>
               {"Regulaminy"}
-              <RiArrowDropDownLine className={`${isDropdownClicked.second ? "animate" : ""}`} />
+              <RiArrowDropDownLine
+                className={`${isDropdownClicked.second ? "animate" : ""}`}
+              />
             </div>
-            <ul id="dropdown-2" className={`${isDropdownClicked.second ? "" : "hidden"}`}>
+            <ul
+              id="dropdown-2"
+              className={`${isDropdownClicked.second ? "" : "hidden"}`}
+            >
               <li>
                 <Link to="/regulamin">Regulamin</Link>
               </li>
@@ -76,7 +86,9 @@ function Footer() {
           <div className="footer__column">
             <div className="footer__dropdown" onClick={expandDropdown}>
               {"Portale społecznościowe"}
-              <RiArrowDropDownLine className={`${isDropdownClicked.third ? "animate" : ""}`} />
+              <RiArrowDropDownLine
+                className={`${isDropdownClicked.third ? "animate" : ""}`}
+              />
             </div>
             <ul
               id="dropdown-3"

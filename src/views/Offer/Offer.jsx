@@ -41,7 +41,9 @@ function Offer() {
                           src="/src/assets/cart.svg"
                           alt="cart"
                           onClick={() => {
-                            const priceValue = parseInt(product.amount_with_currency.split(" ")[0]);
+                            const priceValue = parseInt(
+                              product.amount_with_currency.split(" ")[0],
+                            );
 
                             setCart({
                               type: ACTIONS.ADD_TO_CART,
@@ -63,7 +65,9 @@ function Offer() {
                         <h3>{product.title}</h3>
                         <h4>{product.amount_with_currency}</h4>
                         <Link to={`/oferta/${product.id}`}>
-                          <button className="btn">{"Dowiedz się więcej"}</button>
+                          <button className="btn">
+                            {"Dowiedz się więcej"}
+                          </button>
                         </Link>
                       </div>
                     </>
@@ -75,7 +79,12 @@ function Offer() {
         </div>
       )}
       {anyBlogPosts && (
-        <Carousel data={posts} Block={Item} page={"blog"} title={"Pedal & Plate - blog"} />
+        <Carousel
+          data={posts}
+          Block={Item}
+          page={"blog"}
+          title={"Pedal & Plate - blog"}
+        />
       )}
       {showDialog && (
         <Dialog>

@@ -1,55 +1,56 @@
-@use '/src/scss/index' as *;
+@use "/src/scss/index" as *;
 
 .product-table {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 
-    thead th {
-        font-weight: 700;
-        padding-bottom: 5px;
+  thead th {
+    font-weight: 700;
+    padding-bottom: 5px;
 
-        &:first-of-type {
-            width: 60%;
-        }
+    &:first-of-type {
+      width: 60%;
     }
+  }
 
-    th, td {
-        border-bottom-width: 3px;
-        font-size: inherit;
-    }
-    
-    svg {
-        cursor: pointer;
-        height: 23px;
-        width: 23px;
-        margin-top: 2px;
-    }
+  th,
+  td {
+    border-bottom-width: 3px;
+    font-size: inherit;
+  }
 
-    &__item {
-        display: flex;
-        align-items: center;
-    }
+  svg {
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    margin-top: 2px;
+  }
 
-    &__img {
-        width: 350px;
-        height: 150px;
-        margin-right: 1em;
+  &__item {
+    display: flex;
+    align-items: center;
+  }
 
-        img {
-            object-fit: contain;
-        }
-    }
+  &__img {
+    width: 350px;
+    height: 150px;
+    margin-right: 1em;
 
-    &__title {
-        width: 100%;
+    img {
+      object-fit: contain;
     }
+  }
 
-    &__summary {
-        padding-top: 1em;
-        text-align: right;
-    }
+  &__title {
+    width: 100%;
+  }
 
-    .MuiButtonGroup-root button.MuiButtonBase-root {
-        color: #5A4FF3;
-        border-color: #5A4FF3;
-    }
+  &__summary {
+    padding-top: 1em;
+    text-align: right;
+  }
+
+  .MuiButtonGroup-root button.MuiButtonBase-root {
+    color: #5a4ff3;
+    border-color: #5a4ff3;
+  }
 }

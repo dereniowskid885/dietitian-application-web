@@ -1,8 +1,8 @@
-import React from 'react';
-import './Overlay.scss';
+import React from "react";
+import "./Overlay.scss";
 
 function Overlay({ hideOverlay }) {
-    return <div className='overlay' onClick={hideOverlay} />
+  return <div className="overlay" onClick={hideOverlay} />;
 }
 
 export default Overlay;

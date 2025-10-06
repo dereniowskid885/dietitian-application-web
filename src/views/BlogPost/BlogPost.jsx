@@ -44,14 +44,23 @@ function BlogPost() {
             <img className="blog-post__image" src={post.img} alt="blog post" />
             <div className="blog-post__wrapper">
               <div className="blog-post__content">{post.content_1}</div>
-              <img className="blog-post__content-img" src={post.content_img} alt="content" />
+              <img
+                className="blog-post__content-img"
+                src={post.content_img}
+                alt="content"
+              />
               <div className="blog-post__content">{post.content_2}</div>
             </div>
           </div>
         </>
       )}
       {anyPosts && (
-        <Carousel data={posts} page={"blog"} title={"Pedal & Plate - blog"} Block={Item} />
+        <Carousel
+          data={posts}
+          page={"blog"}
+          title={"Pedal & Plate - blog"}
+          Block={Item}
+        />
       )}
       <ContactBlock data={contactData} />
     </main>

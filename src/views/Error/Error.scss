@@ -1,17 +1,17 @@
-@use '/src/scss/index' as *;
+@use "/src/scss/index" as *;
 
 .error {
-    @extend .gray-block;
+  @extend .gray-block;
 
-    &__content {
-        @extend .gray-block__content;
-    }
+  &__content {
+    @extend .gray-block__content;
+  }
 
-    &__container {
-        @extend .gray-block__container;
-    }
+  &__container {
+    @extend .gray-block__container;
+  }
 
-    h1 {
-        text-align: center;
-    }
+  h1 {
+    text-align: center;
+  }
 }

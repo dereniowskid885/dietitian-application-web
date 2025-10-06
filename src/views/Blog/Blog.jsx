@@ -18,7 +18,9 @@ function Blog() {
     <main className="blog">
       <Breadcrumbs />
       <div className="blog__content">
-        <h1 className="blog__title">{"Kolarstwo oczami zakochanego w nim dietetyka."}</h1>
+        <h1 className="blog__title">
+          {"Kolarstwo oczami zakochanego w nim dietetyka."}
+        </h1>
         <p className="blog__sub-title">
           {
             "Z przymrużeniem oka o najpiękniejszym sporcie na świecie, a do tego niewielka dawka żywieniowego naukowego bełkotu."
