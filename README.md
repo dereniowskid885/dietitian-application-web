@@ -81,5 +81,5 @@ The application will be available at http://localhost:3000
 ## 👥 Authors
 
 **Developed by:**  
-Frontend - Daniel Dereniowski - https://www.linkedin.com/in/daniel-dereniowski/
-Backend - Wojciech Pragłowski - https://www.linkedin.com/in/wojciech-p-b4bb90212/
+- Frontend - Daniel Dereniowski - https://www.linkedin.com/in/daniel-dereniowski/
+- Backend - Wojciech Pragłowski - https://www.linkedin.com/in/wojciech-p-b4bb90212/
