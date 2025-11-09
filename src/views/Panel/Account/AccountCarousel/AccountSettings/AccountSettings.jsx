@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./AccountSettings.scss";
 import { useForm } from "react-hook-form";
-import { useDialog } from "/src/contexts/DialogContext";
 import { useUser } from "/src/contexts/UserContext";
 import FormInput from "/src/components/other/FormInput/FormInput";
 

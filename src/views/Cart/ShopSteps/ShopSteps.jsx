@@ -1,4 +1,3 @@
-import React from "react";
 import "./ShopSteps.scss";
 import StepCircle from "/src/assets/step-circle.svg";
 import WhiteCircle from "/src/assets/white-circle.svg";

@@ -1,5 +1,3 @@
-import React from "react";
-
 function ErrorMessage({ message, closeDialog }) {
   return (
     <div className="message">

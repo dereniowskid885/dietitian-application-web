@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductAdd.scss";
 import Carousel from "/src/components/layout/Carousel/Carousel";

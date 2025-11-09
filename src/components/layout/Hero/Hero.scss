@@ -5,17 +5,18 @@
   width: 100%;
   justify-content: space-between;
   background-color: #e7e7e7;
+
   @include max-width($bp-laptop) {
     flex-direction: column-reverse;
     text-align: center;
   }
 
   &__title {
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
   }
 
   &__sub-title {
-    margin-bottom: 16px;
+    margin-bottom: 1em;
   }
 
   &__content {
@@ -24,6 +25,7 @@
     justify-content: center;
     padding: 5em 3em 5em 2em;
     width: 50%;
+
     @include max-width($bp-laptop) {
       width: auto;
       padding: 2em;
@@ -33,6 +35,7 @@
 
   &__image {
     max-width: 60%;
+
     @include max-width($bp-laptop) {
       max-width: 100%;
     }

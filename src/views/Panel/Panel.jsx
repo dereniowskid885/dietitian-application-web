@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Panel.scss";
 import Breadcrumbs from "/src/components/layout/Breadcrumbs/Breadcrumbs";
 import Dialog from "/src/components/layout/Dialog/Dialog";

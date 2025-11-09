@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.scss";
 import { useForm } from "react-hook-form";
@@ -39,10 +38,7 @@ function LoginForm() {
   };
 
   return (
-    <form
-      className="login-form"
-      onSubmit={handleSubmit((data) => authenticateUser(data))}
-    >
+    <form className="login-form" onSubmit={handleSubmit((data) => authenticateUser(data))}>
       <div className="login-form__wrapper">
         <h2>{"Logowanie"}</h2>
         <FormInput

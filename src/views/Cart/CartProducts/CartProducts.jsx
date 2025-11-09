@@ -1,4 +1,3 @@
-import React from "react";
 import ProductTable from "./ProductTable/ProductTable";
 import { Link } from "react-router-dom";
 

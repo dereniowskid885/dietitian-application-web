@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Cart.scss";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "/src/components/layout/Breadcrumbs/Breadcrumbs";
@@ -63,9 +63,7 @@ function Cart() {
           <div className="cart__empty">
             <h2>{"Twój koszyk jest aktualnie pusty"}</h2>
             <Link to={"/oferta"}>
-              <button className="btn btn--transparent">
-                {"Wróć do zakupów"}
-              </button>
+              <button className="btn btn--transparent">{"Wróć do zakupów"}</button>
             </Link>
           </div>
         )}

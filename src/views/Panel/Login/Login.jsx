@@ -1,4 +1,3 @@
-import React from "react";
 import LoginForm from "/src/views/Panel/Login/LoginForm/LoginForm";
 
 function Login({ showRegister }) {
@@ -12,9 +11,7 @@ function Login({ showRegister }) {
       <div className="panel__block">
         <div className="panel__wrapper">
           <h2>{"Nowy klient"}</h2>
-          <div className="panel__subtitle">
-            {"Załóż konto i zyskaj dostęp do:"}
-          </div>
+          <div className="panel__subtitle">{"Załóż konto i zyskaj dostęp do:"}</div>
           <ul>
             <li>
               {checkIcon}

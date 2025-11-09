@@ -2,11 +2,40 @@
 
 .carousel {
   padding: 0 2em 5em;
+
   @include max-width($bp-tablet) {
     padding: 0 2em 4em;
   }
 
   h2 {
     text-align: center;
+  }
+
+  &-skeleton-item {
+    background-color: #e0e0e063;
+    height: 250px;
+    width: 100%;
+    margin: 0 20px;
+
+    @include max-width($bp-mobile) {
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        display: none;
+      }
+    }
+
+    @include max-width($bp-tablet) {
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        display: none;
+      }
+    }
+
+    @include max-width($bp-laptop) {
+      &:nth-of-type(4) {
+        display: none;
+      }
+    }
   }
 }

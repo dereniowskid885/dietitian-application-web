@@ -1,4 +1,3 @@
-import React from "react";
 import "./Overlay.scss";
 
 function Overlay({ hideOverlay }) {

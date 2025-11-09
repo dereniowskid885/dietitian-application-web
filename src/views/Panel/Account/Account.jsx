@@ -1,4 +1,3 @@
-import React from "react";
 import "./Account.scss";
 import AccountCarousel from "./AccountCarousel/AccountCarousel";
 import { useUser } from "/src/contexts/UserContext";
@@ -23,17 +22,15 @@ function Account() {
 
   return (
     <div className="account">
-      {user.first_name && (
-        <>
-          <h1>{`Witaj ${user.first_name}!`}</h1>
-          <div className="account__content">
-            <AccountCarousel />
-          </div>
-          <button className="btn" onClick={logOut}>
-            {"Wyloguj"}
-          </button>
-        </>
-      )}
+      <h1>{`Witaj ${user.first_name ?? ""}!`}</h1>
+
+      <div className="account__content">
+        <AccountCarousel />
+      </div>
+
+      <button className="btn" onClick={logOut}>
+        {"Wyloguj"}
+      </button>
     </div>
   );
 }

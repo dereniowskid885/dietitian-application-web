@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Regulations.scss";
 import Breadcrumbs from "/src/components/layout/Breadcrumbs/Breadcrumbs";
 import data from "/src/data/Regulations.js";

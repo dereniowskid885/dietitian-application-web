@@ -1,4 +1,3 @@
-import React from "react";
 import "./ContactBlock.scss";
 import { FaRegCopy } from "react-icons/fa";
 import ContactForm from "/src/views/Contact/ContactForm/ContactForm";
@@ -26,20 +25,12 @@ function ContactBlock({ data }) {
         <div className="contact-block__info">
           <ul>
             <li>
-              <img
-                className="contact-block__icon"
-                src="/src/assets/email.svg"
-                alt="Email"
-              />
+              <img className="contact-block__icon" src="/src/assets/email.svg" alt="Email" />
               {"pedal&plate@example.com"}
               <FaRegCopy onClick={copyToClipboard} />
             </li>
             <li>
-              <img
-                className="contact-block__icon"
-                src="/src/assets/phone.svg"
-                alt="Phone"
-              />
+              <img className="contact-block__icon" src="/src/assets/phone.svg" alt="Phone" />
               {"+48 123123123"}
               <FaRegCopy onClick={copyToClipboard} />
             </li>

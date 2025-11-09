@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./AccountOrders.scss";
+import LoaderSpinner from "../../../../../components/other/LoaderSpinner/LoaderSpinner";
 
 function AccountOrders() {
   const [orders, setOrders] = useState([]);
@@ -29,18 +30,21 @@ function AccountOrders() {
   return (
     <div className="account-orders">
       <h2>{"Twoje zamówienia"}</h2>
+
       <div className="account-orders__content">
-        <ul>
-          {orders.map((order) => {
-            return (
-              <li key={order.id}>
-                <Link to={`/zamowienie/${order.id}`}>
-                  {`Zamówienie id: ${order.id}`}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        {orders && orders.length > 0 ? (
+          <ul>
+            {orders.map((order) => {
+              return (
+                <li key={order.id}>
+                  <Link to={`/zamowienie/${order.id}`}>{`Zamówienie id: ${order.id}`}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <LoaderSpinner />
+        )}
       </div>
     </div>
   );

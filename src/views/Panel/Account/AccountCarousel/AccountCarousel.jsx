@@ -1,8 +1,7 @@
-import React from "react";
 import "./AccountCarousel.scss";
 import ElasticCarousel from "@itseasy21/react-elastic-carousel";
 import AccountOrders from "./AccountOrders/AccountOrders";
-import AccountSettings from "./AccountSettings/AccountSettings";
+// import AccountSettings from "./AccountSettings/AccountSettings";
 
 const breakPoints = [{ width: 1, itemsToShow: 1, itemstoScroll: 1 }];
 

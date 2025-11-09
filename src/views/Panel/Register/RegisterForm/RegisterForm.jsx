@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./RegisterForm.scss";
 import { useForm } from "react-hook-form";
 import { useDialog } from "/src/contexts/DialogContext";
 import { useLoading } from "/src/contexts/LoadingContext";
 import FormInput from "/src/components/other/FormInput/FormInput";
 
-const termsLabel =
-  "* Oświadczam, że zapoznałem(-am) się i akceptuję treść regulaminu.";
+const termsLabel = "* Oświadczam, że zapoznałem(-am) się i akceptuję treść regulaminu.";
 
 function RegisterForm({ hideRegister }) {
   const [errors, setErrors] = useState({});
@@ -46,10 +45,7 @@ function RegisterForm({ hideRegister }) {
   console.log(errors);
 
   return (
-    <form
-      className="register-form"
-      onSubmit={handleSubmit((data) => registerUser(data))}
-    >
+    <form className="register-form" onSubmit={handleSubmit((data) => registerUser(data))}>
       <div className="register-form__wrapper">
         <h2>{"Załóż konto"}</h2>
         <FormInput

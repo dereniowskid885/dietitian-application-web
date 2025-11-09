@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./About.scss";
 import ContactBlock from "/src/components/layout/ContactBlock/ContactBlock";
 import ContentBlock from "/src/components/layout/ContentBlock/ContentBlock";
@@ -10,8 +10,6 @@ import Hero from "/src/components/layout/Hero/Hero";
 function About() {
   const [firstSection, setFirstSection] = useState([]);
   const [secondSection, setSecondSection] = useState([]);
-  const isFirstSection = firstSection.length > 0;
-  const isSecondSection = secondSection.length > 0;
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/content-blocks/about/`, {
@@ -43,9 +41,9 @@ function About() {
   return (
     <main className="about">
       <Hero data={data.hero} />
-      {isFirstSection && <ContentBlock data={firstSection} />}
+      <ContentBlock data={firstSection} skeletonItemsAmount={1} />
       <ExperienceBlock data={data.experienceBlock} />
-      {isSecondSection && <ContentBlock data={secondSection} />}
+      <ContentBlock data={secondSection} />
       <ContactBlock data={contactData} />
     </main>
   );

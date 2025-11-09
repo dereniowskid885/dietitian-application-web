@@ -1,4 +1,3 @@
-import React from "react";
 import "./Summary.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "/src/contexts/CartContext";

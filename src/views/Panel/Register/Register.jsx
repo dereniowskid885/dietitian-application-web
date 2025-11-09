@@ -1,4 +1,3 @@
-import React from "react";
 import RegisterForm from "/src/views/Panel/Register/RegisterForm/RegisterForm";
 
 function Register({ hideRegister }) {

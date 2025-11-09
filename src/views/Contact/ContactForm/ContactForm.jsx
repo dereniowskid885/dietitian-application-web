@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ContactForm.scss";
 import { useForm } from "react-hook-form";
 import { useDialog } from "/src/contexts/DialogContext";
@@ -40,10 +40,7 @@ function ContactForm() {
   };
 
   return (
-    <form
-      className="contact-form"
-      onSubmit={handleSubmit((data) => sendMail(data))}
-    >
+    <form className="contact-form" onSubmit={handleSubmit((data) => sendMail(data))}>
       <FormInput
         id={"first_and_last_name"}
         label={"Imię i Nazwisko *"}

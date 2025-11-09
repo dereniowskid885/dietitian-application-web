@@ -4,6 +4,7 @@
   padding: 2em;
   max-width: 70%;
   border: 2px solid lightgray;
+
   @include max-width($bp-mobile) {
     max-width: 100%;
   }

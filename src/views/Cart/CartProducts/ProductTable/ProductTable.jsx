@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProductTable.scss";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -69,8 +68,7 @@ function ProductTable() {
                     </Button>
                     <Button
                       onClick={() => {
-                        const quantity =
-                          item.quantity === 0 ? 0 : item.quantity - 1;
+                        const quantity = item.quantity === 0 ? 0 : item.quantity - 1;
 
                         setCart({
                           type: ACTIONS.CHANGE_ITEM_QTY,

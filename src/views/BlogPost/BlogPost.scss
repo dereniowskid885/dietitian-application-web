@@ -1,12 +1,15 @@
 @use "/src/scss/index" as *;
 
 .blog-post {
+  $c: &;
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2em 6em 6em;
     margin-bottom: 2em;
+
     @include max-width($bp-tablet) {
       padding: 2em;
     }
@@ -16,33 +19,69 @@
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
+
+    #{$c}__container--skeleton & {
+      width: 70%;
+      height: 3rem;
+      background-color: #e0e0e063;
+    }
   }
 
   &__info {
     margin-bottom: 2em;
+
+    #{$c}__container--skeleton & {
+      width: 30%;
+      height: 1.5rem;
+      background-color: #e0e0e063;
+    }
   }
 
   &__image {
     max-width: 680px;
     margin-bottom: 5em;
+
     @include max-width($bp-tablet) {
       margin-bottom: 3em;
+    }
+
+    #{$c}__container--skeleton & {
+      width: 100%;
+      height: 300px;
+      background-color: #e0e0e063;
     }
   }
 
   &__wrapper {
+    width: 100%;
     max-width: 60vw;
     line-height: 33px;
+
     @include max-width($bp-desktop) {
       max-width: 100%;
       line-height: 28px;
     }
   }
 
+  &__content {
+    #{$c}__container--skeleton & {
+      width: 100%;
+      height: 200px;
+      background-color: #e0e0e063;
+    }
+  }
+
   &__content-img {
     margin: 4em 0;
+
     @include max-width($bp-tablet) {
       margin: 2em 0;
+    }
+
+    #{$c}__container--skeleton & {
+      width: 100%;
+      height: 200px;
+      background-color: #e0e0e063;
     }
   }
 }

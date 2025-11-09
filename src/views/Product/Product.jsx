@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Product.scss";
 import { useParams } from "react-router-dom";
 import Breadcrumbs from "/src/components/layout/Breadcrumbs/Breadcrumbs";
@@ -9,6 +9,7 @@ import { useDialog } from "/src/contexts/DialogContext";
 import Dialog from "/src/components/layout/Dialog/Dialog";
 import getRandomProducts from "/src/components/other/ProductRandomizer/ProductRandomizer";
 import ProductAdd from "/src/components/layout/Dialog/Message/ProductAdd/ProductAdd";
+import ProductPageSkeleton from "./ProductPageSkeleton";
 
 function Product() {
   const {
@@ -22,6 +23,7 @@ function Product() {
 
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const isContentLoaded = product && product.img;
   const randomProducts = getRandomProducts(product.id, 6);
   const addedProduct = cart[cart.length - 1];
 
@@ -44,63 +46,64 @@ function Product() {
       });
   }, [id]);
 
+  const handleAddToCart = () => {
+    const priceValue = parseInt(product.amount_with_currency.split(" ")[0]);
+
+    setCart({
+      type: ACTIONS.ADD_TO_CART,
+      payload: {
+        id: product.id,
+        img: product.img,
+        title: product.title,
+        price: product.amount_with_currency,
+        priceValue: priceValue,
+      },
+    });
+
+    toggleDialog();
+  };
+
   return (
     <main className="product">
-      {product.img && (
-        <>
-          <Breadcrumbs title={product.title} />
-          <div className="product__container">
-            <div className="product__info">
-              <div className="product__image">
-                <img src={product.img} alt="offer" />
-              </div>
-              <div className="product__content">
-                <div className="product__wrapper">
-                  <h1>{product.title}</h1>
-                  <h2>{product.amount_with_currency}</h2>
-                  <p>{product.short_description}</p>
-                </div>
-                <button
-                  className="btn btn--transparent"
-                  onClick={() => {
-                    const priceValue = parseInt(
-                      product.amount_with_currency.split(" ")[0],
-                    );
+      <Breadcrumbs title={product.title} />
 
-                    setCart({
-                      type: ACTIONS.ADD_TO_CART,
-                      payload: {
-                        id: product.id,
-                        img: product.img,
-                        title: product.title,
-                        price: product.amount_with_currency,
-                        priceValue: priceValue,
-                      },
-                    });
+      {isContentLoaded ? (
+        <div className="product__container">
+          <div className="product__info">
+            <div className="product__image">
+              <img src={product.img} alt="offer" />
+            </div>
 
-                    toggleDialog();
-                  }}
-                >
-                  {"Dodaj do koszyka"}
-                </button>
+            <div className="product__content">
+              <div className="product__wrapper">
+                <h1>{product.title}</h1>
+                <h2>{product.amount_with_currency}</h2>
+                <p>{product.short_description}</p>
               </div>
+
+              <button className="btn btn--transparent" onClick={handleAddToCart}>
+                {"Dodaj do koszyka"}
+              </button>
             </div>
-            <div className="product__description">
-              <h2>{"Opis"}</h2>
-              <p>{product.full_description}</p>
-            </div>
-            {products && (
-              <Carousel
-                randomProducts={randomProducts}
-                data={products}
-                Block={Item}
-                title={"Podobne produkty"}
-                page={"oferta"}
-              />
-            )}
           </div>
-        </>
+
+          <div className="product__description">
+            <h2>{"Opis"}</h2>
+            <p>{product.full_description}</p>
+          </div>
+        </div>
+      ) : (
+        <ProductPageSkeleton />
       )}
+
+      <Carousel
+        randomProducts={randomProducts}
+        data={products}
+        Block={Item}
+        title={"Podobne produkty"}
+        page={"oferta"}
+      />
+
       {showDialog && (
         <Dialog>
           <ProductAdd product={addedProduct} />

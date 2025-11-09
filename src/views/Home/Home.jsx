@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Home.scss";
 import ContactBlock from "/src/components/layout/ContactBlock/ContactBlock";
 import Hero from "/src/components/layout/Hero/Hero";
@@ -11,8 +11,6 @@ import ContentBlock from "/src/components/layout/ContentBlock/ContentBlock";
 function Home() {
   const [contentBlocks, setContentBlocks] = useState([]);
   const [opinions, setOpinions] = useState([]);
-  const anyContentBlocks = contentBlocks.length > 0;
-  const anyOpinions = opinions.length > 0;
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/content-blocks/home/`, {
@@ -53,14 +51,8 @@ function Home() {
   return (
     <main className="home">
       <Hero data={data.hero} />
-      {anyContentBlocks && <ContentBlock data={contentBlocks} />}
-      {anyOpinions && (
-        <Carousel
-          data={opinions}
-          Block={OpinionItem}
-          title={"Opinie moich podopiecznych"}
-        />
-      )}
+      <ContentBlock data={contentBlocks} />
+      <Carousel data={opinions} Block={OpinionItem} title={"Opinie moich podopiecznych"} />
       <ContactBlock data={contactData} />
     </main>
   );

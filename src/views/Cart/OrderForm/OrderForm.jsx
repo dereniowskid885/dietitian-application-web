@@ -1,4 +1,3 @@
-import React from "react";
 import "./OrderForm.scss";
 import { useForm } from "react-hook-form";
 import { useUser } from "/src/contexts/UserContext";
@@ -12,9 +11,7 @@ function OrderForm({ next, back, orderForm, setOrderForm, errors }) {
     first_name: user.first_name ? user.first_name : orderForm?.first_name,
     last_name: user.last_name ? user.last_name : orderForm?.last_name,
     street: user.street ? user.street : orderForm?.street,
-    house_number: user.house_number
-      ? user.house_number
-      : orderForm?.house_number,
+    house_number: user.house_number ? user.house_number : orderForm?.house_number,
     post_code: user.post_code ? user.post_code : orderForm?.post_code,
     city: user.city ? user.city : orderForm?.city,
     email: user.email ? user.email : orderForm?.email,
@@ -29,10 +26,7 @@ function OrderForm({ next, back, orderForm, setOrderForm, errors }) {
   };
 
   return (
-    <form
-      className="order-form"
-      onSubmit={handleSubmit((data) => prepareOrder(data))}
-    >
+    <form className="order-form" onSubmit={handleSubmit((data) => prepareOrder(data))}>
       <div className="order-form__container">
         <div className="order-form__first">
           <FormInput
@@ -138,11 +132,7 @@ function OrderForm({ next, back, orderForm, setOrderForm, errors }) {
           </div>
           <div className="order-form__block">
             <h2>{"Informacje dodatkowe"}</h2>
-            <textarea
-              {...register("info")}
-              defaultValue={formValues.info}
-              maxLength={300}
-            />
+            <textarea {...register("info")} defaultValue={formValues.info} maxLength={300} />
           </div>
         </div>
       </div>

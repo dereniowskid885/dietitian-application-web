@@ -11,12 +11,22 @@
 
   &__error {
     @extend .gray-block__container;
+
     flex-grow: 1;
   }
 
   &__content {
     @extend .summary;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 2em;
+
+    .loader-spinner {
+      align-self: center;
+      margin-bottom: 2em;
+    }
   }
 
   &__product-img {

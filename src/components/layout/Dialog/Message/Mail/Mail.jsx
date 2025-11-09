@@ -1,5 +1,3 @@
-import React from "react";
-
 function Mail({ closeDialog }) {
   return (
     <div className="message">

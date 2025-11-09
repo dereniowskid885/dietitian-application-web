@@ -1,9 +1,13 @@
 @use "/src/scss/index" as *;
 
 .account {
+  $c: &;
+
   @extend .gray-block__container;
+
   padding: 0 2em 2em;
   line-height: 25px;
+
   @include max-width($bp-mobile) {
     padding: 0 10px 2em;
   }

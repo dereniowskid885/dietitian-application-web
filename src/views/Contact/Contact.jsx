@@ -1,4 +1,3 @@
-import React from "react";
 import "./Contact.scss";
 import Breadcrumbs from "/src/components/layout/Breadcrumbs/Breadcrumbs";
 import data from "/src/data/Contact.js";

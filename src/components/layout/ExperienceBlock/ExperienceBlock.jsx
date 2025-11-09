@@ -1,4 +1,3 @@
-import React from "react";
 import "./ExperienceBlock.scss";
 
 function ExperienceBlock({ data }) {
